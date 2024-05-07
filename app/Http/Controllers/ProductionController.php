@@ -104,11 +104,7 @@ if ($request->has('quantite')) {
 
     public function edit($id)
     {
-        $production = Production::findOrFail($id);
-        $ateliers = Atelier::all();
-        $lignes = Ligne::all();
-        $articles = Article::all();
-        return view('productions.edit', compact('production', 'ateliers', 'lignes', 'articles'));
+       
     }
 
     public function update(Request $request, $id)
